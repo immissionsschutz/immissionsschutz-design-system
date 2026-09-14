@@ -73,6 +73,24 @@ konsumierende Apps binden sie selbst ein (z. B. per Google-Fonts-Link in
 `index.html`), damit jede App volle Kontrolle ueber Ladezeitpunkt/-strategie
 behaelt.
 
+## Bekannte Einschraenkungen (v1.0.0)
+
+- Kein `exports`-Feld in `package.json` - bewusst so, damit Subpath-Imports
+  wie `.../dist/tokens.css` funktionieren. Ein spaeter ergaenztes, auf `"."`
+  beschraenktes `exports`-Feld wuerde diese Imports stillschweigend brechen -
+  beim Anpassen von `package.json` darauf achten.
+- Button/Badge haben noch keine automatisierten Tests (nur manuell gegen
+  rhapp-frontend verifiziert). Fuer eine erste Foundation-Version bewusst
+  zurueckgestellt, aber nachzuholen, sobald mehr Repos von diesem Paket
+  abhaengen.
+- `--farbe-ok`/`--farbe-warn` (identisch zu den Reporter-vorgegebenen Werten
+  `--ok`/`--warn` aus dem PM#24-Mock) erreichen als Text auf ihrer eigenen
+  `-soft`-Flaeche laut grober WCAG-Kontrastschaetzung nur ca. 3.7:1 bzw.
+  4:1 - unter der 4.5:1-Anforderung fuer normalen Fliesstext. Betrifft
+  `Badge` in den Varianten `ok`/`warn`. Bewusst nicht eigenmaechtig
+  geaendert, da es die explizite, mock-validierte Reporter-Entscheidung
+  waere - vor einer Korrektur mit dem Reporter abstimmen.
+
 ## Neue Version veroeffentlichen
 
 Da dies keine npm-Registry nutzt, ist "veroeffentlichen" gleichbedeutend mit
