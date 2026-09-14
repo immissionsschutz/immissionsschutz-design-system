@@ -52,10 +52,15 @@
 
   /* Statusfarben fuer die Betriebsdaten-Hierarchie (Betriebseinheit/
      Emissionsquelle/Eintrag) - bewusst 3 unterscheidbare, aber gedaempfte
-     Farbtoene statt der bisherigen satten Google-Palette. */
-  --farbe-hierarchie-betriebseinheit: #2b6e76;
-  --farbe-hierarchie-emissionsquelle: #3f8f5f;
-  --farbe-hierarchie-eintrag: #b6791f;
+     Farbtoene statt der bisherigen satten Google-Palette. Als Aliase auf
+     --farbe-akzent/--farbe-ok/--farbe-warn definiert statt eigener
+     Hex-Werte, damit sie nicht wieder unbemerkt von deren Werten abweichen
+     (siehe rhapp-frontend#47: hier waren sie bis v1.0.2 eigenstaendige, bei
+     der WCAG-Kontrastkorrektur von --farbe-ok/--farbe-warn vergessene
+     Kopien). */
+  --farbe-hierarchie-betriebseinheit: var(--farbe-akzent);
+  --farbe-hierarchie-emissionsquelle: var(--farbe-ok);
+  --farbe-hierarchie-eintrag: var(--farbe-warn);
 
   --radius-gross: 0.5rem;
   --radius-mittel: 0.375rem;
