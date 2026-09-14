@@ -1,0 +1,40 @@
+/* Tabellen-Grundstil (rhapp-frontend#41), passend zur bereits in
+   rhapp-frontend etablierten "spaltenuebersicht"-Optik (dicht statt
+   kartenbasiert, Grill-Me-Entscheidung 2026-08-10: fuer Experten-Nutzer,
+   nicht Gelegenheitsnutzer - weniger Abstand, mehr Information je Zeile).
+   Reine CSS-Klasse statt React-Komponente, da eine <table> mit ihren
+   Nutzdaten-Zeilen immer projektspezifisch bleibt - hier steht nur das
+   wiederverwendbare Grundgeruest. */
+
+.ids-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  font-family: var(--schriftfamilie);
+}
+
+.ids-table th,
+.ids-table td {
+  padding: 4px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--farbe-rand);
+  vertical-align: top;
+}
+
+.ids-table thead th {
+  font-weight: 600;
+  color: var(--farbe-text-gedaempft);
+  border-bottom: 1px solid var(--farbe-rand-stark);
+}
+
+/* Fuer Zahlen/Kennungen (z. B. "BE1Q1", Emissionswerte) - tabellarische
+   Ziffern, damit Spalten mit wechselnden Werten nicht "wandern". */
+.ids-table .ids-table__zahl {
+  font-family: var(--schriftfamilie-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.ids-table tfoot tr {
+  font-weight: 600;
+  border-top: 2px solid var(--farbe-rand);
+}
