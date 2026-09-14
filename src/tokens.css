@@ -61,6 +61,11 @@
   --farbe-hierarchie-betriebseinheit: var(--farbe-akzent);
   --farbe-hierarchie-emissionsquelle: var(--farbe-ok);
   --farbe-hierarchie-eintrag: var(--farbe-warn);
+  /* Eigenes Alias statt --farbe-hierarchie-eintrag wiederzuverwenden -
+     Variante und Eintrag sind unterschiedliche, unabhaengige Hierarchien
+     (Varianten-Baum vs. Betriebseinheit/Emissionsquelle/Eintrag), die nur
+     zufaellig denselben Farbton teilen. */
+  --farbe-hierarchie-variante: var(--farbe-warn);
 
   --radius-gross: 0.5rem;
   --radius-mittel: 0.375rem;
