@@ -83,13 +83,13 @@ behaelt.
   rhapp-frontend verifiziert). Fuer eine erste Foundation-Version bewusst
   zurueckgestellt, aber nachzuholen, sobald mehr Repos von diesem Paket
   abhaengen.
-- `--farbe-ok`/`--farbe-warn` (identisch zu den Reporter-vorgegebenen Werten
-  `--ok`/`--warn` aus dem PM#24-Mock) erreichen als Text auf ihrer eigenen
-  `-soft`-Flaeche laut grober WCAG-Kontrastschaetzung nur ca. 3.7:1 bzw.
-  4:1 - unter der 4.5:1-Anforderung fuer normalen Fliesstext. Betrifft
-  `Badge` in den Varianten `ok`/`warn`. Bewusst nicht eigenmaechtig
-  geaendert, da es die explizite, mock-validierte Reporter-Entscheidung
-  waere - vor einer Korrektur mit dem Reporter abstimmen.
+- `--farbe-ok`/`--farbe-warn` wurden gegenueber den urspruenglichen
+  Mock-Werten (`#3f8f5f`/`#b6791f`, identisch zu `--ok`/`--warn` aus dem
+  PM#24-Mock) leicht nachgedunkelt (`#2c7048`/`#8f5c16`) - als Text auf der
+  jeweiligen `-soft`-Flaeche (z. B. `Badge`, Prozessleiste) erreichten die
+  Mock-Werte laut grober WCAG-Kontrastschaetzung nur ca. 4:1/3,7:1 statt der
+  4.5:1-Anforderung fuer normalen Fliesstext. Ruecksprache mit dem Reporter
+  erfolgt (rhapp-frontend#41), Abweichung vom Mock bewusst und dokumentiert.
 
 ## Neue Version veroeffentlichen
 

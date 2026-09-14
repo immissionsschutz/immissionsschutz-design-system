@@ -1,6 +1,6 @@
 {
   "name": "@immissionsschutz/design-system",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Geteiltes Design-System (Tokens + Kernkomponenten) fuer interne Tools der immissionsschutz-Org.",
   "type": "module",
   "main": "./dist/index.js",
